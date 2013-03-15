@@ -6,8 +6,8 @@
 //  Copyright (c) 2013年 Yuan Junsheng. All rights reserved.
 //
 
-#import "Tutorial.h"
+#import "GetHtmlData.h"
 
-@implementation Tutorial
+@implementation GetHtmlData
 @synthesize title = _title, url = _url;
 @end

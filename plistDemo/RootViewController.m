@@ -90,10 +90,7 @@
     {
         mitbbsCell = [[MitbbsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identity];
     }
-    else
-    {
-        mitbbsCell = [[MitbbsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identity];
-    }
+    mitbbsCell.mitbbsTableViewCellDelegate = self;
     mitbbsCell.selectionStyle = UITableViewCellSelectionStyleNone;
     mitbbsCell.headString = [_sectionText[@"classify"] objectAtIndex:indexPath.row][@"text"];
     mitbbsCell.mitClassifyUrl = [_sectionText[@"classify"] objectAtIndex:indexPath.row][@"url"];
@@ -106,11 +103,11 @@
 {
     return 140;
 }
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
+-(void)didSelectRows
 {
-    
-    NSLog(@"indexPath section = %d",[indexPath section]);
-    NSLog(@"rows = %d",[indexPath row]);
+    SecondViewController *secondViewController = [[SecondViewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:secondViewController animated:YES];
 }
 
 @end

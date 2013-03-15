@@ -18,5 +18,6 @@
     NSInteger _mitbbsTableCellRowNum;
 }
 
+-(void)didSelectRows;
 
 @end

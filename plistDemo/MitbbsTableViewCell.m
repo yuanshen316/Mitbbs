@@ -11,6 +11,7 @@
 #import "SecondViewController.h"
 
 @implementation MitbbsTableViewCell
+@synthesize mitbbsTableViewCellDelegate = _mitbbsTableViewCellDelegate;
 
 -(NSMutableArray *)getHtmlData:(NSURL *)url
 {
@@ -22,11 +23,11 @@
     NSMutableArray *newArray = [[NSMutableArray alloc] initWithCapacity:0];
     for (TFHppleElement *getHtmlElement in getHtmlNodes)
     {
-        Tutorial *tutorial = [[Tutorial alloc] init];
-        [newArray addObject:tutorial];
+        GetHtmlData *getHtmlData = [[GetHtmlData alloc] init];
+        [newArray addObject:getHtmlData];
         
-        tutorial.title = [[getHtmlElement firstChild] content];
-        tutorial.url   = [getHtmlElement objectForKey:@"href"];
+        getHtmlData.title = [[getHtmlElement firstChild] content];
+        getHtmlData.url   = [getHtmlElement objectForKey:@"href"];
     }
     return newArray;
 }
@@ -75,7 +76,7 @@
         _headLabel.text = _headString;
     }
     _mitData = [self getHtmlData:[NSURL URLWithString:_mitClassifyUrl]];
-    Tutorial *thisTutorial = [_mitData objectAtIndex:indexPath.row];
+    GetHtmlData *thisTutorial = [_mitData objectAtIndex:indexPath.row];
     [[cell textLabel] setText:thisTutorial.title];
     cell.textLabel.numberOfLines = 0;//相当于无行数限制
     cell.textLabel.lineBreakMode = NSLineBreakByCharWrapping;
@@ -90,8 +91,8 @@
 {
     _selectRowNum = [indexPath row];
     NSLog(@"点击%d",_selectRowNum);
-    SecondViewController *secondView = [[SecondViewController alloc] initWithNibName:nil bundle:nil];
-    //[self presentViewController:secondViewController animated:YES completion:^(void){}];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [_mitbbsTableViewCellDelegate didSelectRows];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

@@ -24,7 +24,7 @@
 		C233A4CC16DCFD7800420868 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C233A4CB16DCFD7800420868 /* libxml2.dylib */; };
 		C23A1EBA16E6267F0090CB9A /* MitbbsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A1EB916E6267F0090CB9A /* MitbbsTableViewCell.m */; };
 		C23A1EC516E631390090CB9A /* 123@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A1EC416E631390090CB9A /* 123@2x.png */; };
-		C23A1ED916E655770090CB9A /* Tutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A1ED816E655770090CB9A /* Tutorial.m */; };
+		C23A1ED916E655770090CB9A /* GetHtmlData.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A1ED816E655770090CB9A /* GetHtmlData.m */; };
 		C263191D16DF3CB00015E696 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C263191C16DF3CB00015E696 /* QuartzCore.framework */; };
 		C28E477016E8E49B00C37651 /* pagecornerlarge.png in Resources */ = {isa = PBXBuildFile; fileRef = C28E476E16E8E49B00C37651 /* pagecornerlarge.png */; };
 		C28E477116E8E49B00C37651 /* pagecornerlarge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C28E476F16E8E49B00C37651 /* pagecornerlarge@2x.png */; };
@@ -39,7 +39,6 @@
 		C2A24AC516EB370F00A2E40E /* uparrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A24ABB16EB370F00A2E40E /* uparrow.png */; };
 		C2A24AC616EB370F00A2E40E /* uparrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A24ABC16EB370F00A2E40E /* uparrow@2x.png */; };
 		C2A24B0116EB3DE200A2E40E /* cancel-button-background.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A24AFE16EB3DE200A2E40E /* cancel-button-background.png */; };
-		C2B81F6316EC1F0D0034F056 /* 19-gearBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B81F6216EC1F0D0034F056 /* 19-gearBlue.png */; };
 		C2B81F6C16EC222D0034F056 /* blue-horizontal-line.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B81F6516EC222D0034F056 /* blue-horizontal-line.png */; };
 		C2B81F6D16EC222D0034F056 /* navbarBackBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B81F6616EC222D0034F056 /* navbarBackBlack.png */; };
 		C2B81F6E16EC222D0034F056 /* profileBarButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B81F6716EC222D0034F056 /* profileBarButton.png */; };
@@ -79,8 +78,8 @@
 		C23A1EB816E6267F0090CB9A /* MitbbsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MitbbsTableViewCell.h; sourceTree = "<group>"; };
 		C23A1EB916E6267F0090CB9A /* MitbbsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MitbbsTableViewCell.m; sourceTree = "<group>"; };
 		C23A1EC416E631390090CB9A /* 123@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123@2x.png"; sourceTree = "<group>"; };
-		C23A1ED716E655770090CB9A /* Tutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tutorial.h; sourceTree = "<group>"; };
-		C23A1ED816E655770090CB9A /* Tutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tutorial.m; sourceTree = "<group>"; };
+		C23A1ED716E655770090CB9A /* GetHtmlData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetHtmlData.h; sourceTree = "<group>"; };
+		C23A1ED816E655770090CB9A /* GetHtmlData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetHtmlData.m; sourceTree = "<group>"; };
 		C263191C16DF3CB00015E696 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C28E476E16E8E49B00C37651 /* pagecornerlarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pagecornerlarge.png; sourceTree = "<group>"; };
 		C28E476F16E8E49B00C37651 /* pagecornerlarge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pagecornerlarge@2x.png"; sourceTree = "<group>"; };
@@ -99,7 +98,6 @@
 		C2A24ABB16EB370F00A2E40E /* uparrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uparrow.png; sourceTree = "<group>"; };
 		C2A24ABC16EB370F00A2E40E /* uparrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uparrow@2x.png"; sourceTree = "<group>"; };
 		C2A24AFE16EB3DE200A2E40E /* cancel-button-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel-button-background.png"; sourceTree = "<group>"; };
-		C2B81F6216EC1F0D0034F056 /* 19-gearBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "19-gearBlue.png"; path = "../../../../Downloads/Mitbbs.com/图片/19-gearBlue.png"; sourceTree = "<group>"; };
 		C2B81F6516EC222D0034F056 /* blue-horizontal-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-horizontal-line.png"; sourceTree = "<group>"; };
 		C2B81F6616EC222D0034F056 /* navbarBackBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbarBackBlack.png; sourceTree = "<group>"; };
 		C2B81F6716EC222D0034F056 /* profileBarButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileBarButton.png; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 				C2B81F6816EC222D0034F056 /* profileBarButton@2x.png */,
 				C2B81F6916EC222D0034F056 /* profileBarButtonHighlighted.png */,
 				C2B81F6A16EC222D0034F056 /* profileBarButtonHighlighted@2x.png */,
-				C2B81F6216EC1F0D0034F056 /* 19-gearBlue.png */,
 				C2A24AFE16EB3DE200A2E40E /* cancel-button-background.png */,
 				C28E476E16E8E49B00C37651 /* pagecornerlarge.png */,
 				C28E476F16E8E49B00C37651 /* pagecornerlarge@2x.png */,
@@ -230,8 +227,8 @@
 		C23A1ED616E655570090CB9A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C23A1ED716E655770090CB9A /* Tutorial.h */,
-				C23A1ED816E655770090CB9A /* Tutorial.m */,
+				C23A1ED716E655770090CB9A /* GetHtmlData.h */,
+				C23A1ED816E655770090CB9A /* GetHtmlData.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -340,7 +337,6 @@
 				C2A24AC516EB370F00A2E40E /* uparrow.png in Resources */,
 				C2A24AC616EB370F00A2E40E /* uparrow@2x.png in Resources */,
 				C2A24B0116EB3DE200A2E40E /* cancel-button-background.png in Resources */,
-				C2B81F6316EC1F0D0034F056 /* 19-gearBlue.png in Resources */,
 				C2B81F6C16EC222D0034F056 /* blue-horizontal-line.png in Resources */,
 				C2B81F6D16EC222D0034F056 /* navbarBackBlack.png in Resources */,
 				C2B81F6E16EC222D0034F056 /* profileBarButton.png in Resources */,
@@ -367,7 +363,7 @@
 				C233A4C516DCD34400420868 /* TFHppleElement.m in Sources */,
 				C233A4C816DCD35200420868 /* XPathQuery.m in Sources */,
 				C23A1EBA16E6267F0090CB9A /* MitbbsTableViewCell.m in Sources */,
-				C23A1ED916E655770090CB9A /* Tutorial.m in Sources */,
+				C23A1ED916E655770090CB9A /* GetHtmlData.m in Sources */,
 				C2A24ABD16EB370F00A2E40E /* FlickTabButton.m in Sources */,
 				C2A24ABE16EB370F00A2E40E /* FlickTableViewController.m in Sources */,
 				C2A24ABF16EB370F00A2E40E /* FlickTabView.m in Sources */,

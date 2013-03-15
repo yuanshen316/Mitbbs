@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Tutorial.h"
+#import "GetHtmlData.h"
+
+@protocol MitbbsTableViewCellDelegate;
 
 @interface MitbbsTableViewCell : UITableViewCell<UITableViewDataSource, UITableViewDelegate>
 {
@@ -16,9 +18,17 @@
     NSMutableArray *_mitData;
     NSMutableArray *_newsData;
     NSInteger _selectRowNum;
+    id mitbbsTableViewCellDelegate;
 }
 @property (nonatomic, copy) NSString *headString;
 @property (nonatomic, retain) NSString *mitClassifyUrl;
 @property (nonatomic, assign) NSInteger selectRowsNum;
+
+@property (nonatomic, assign) id mitbbsTableViewCellDelegate;
+@end
+
+@protocol MitbbsTableViewCellDelegate <NSObject>
+
+-(void)didSelectRows;
 
 @end
