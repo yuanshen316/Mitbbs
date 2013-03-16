@@ -24,7 +24,6 @@
     _plistData = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
     if (self) {
         // Custom initialization
-        self.navigationController.navigationBar.backgroundColor = [UIColor blackColor];
     }
     return self;
 }
@@ -67,7 +66,7 @@
 - (NSString*)scrollTabView:(FlickTabView*)scrollTabView titleForTabAtIndex:(NSInteger)index {
     
     NSDictionary *sectionTitle = [_plistData objectAtIndex:index];
-    NSLog(@"sectionTitle = %@",sectionTitle);
+    NSLog(@"sectionTitle = %@",sectionTitle[@"text"]);
 	return sectionTitle[@"text"];
 }
 
@@ -86,17 +85,19 @@
 {
     static NSString *identity = @"cell";
     MitbbsTableViewCell *mitbbsCell = (MitbbsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identity];
-    if (mitbbsCell == nil)
-    {
+//    if (mitbbsCell == nil)
+//    {
         mitbbsCell = [[MitbbsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identity];
-    }
+//    }
+//    else
+//    {
+//        mitbbsCell = [[MitbbsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identity];
+//    }
     mitbbsCell.mitbbsTableViewCellDelegate = self;
     mitbbsCell.selectionStyle = UITableViewCellSelectionStyleNone;
     mitbbsCell.headString = [_sectionText[@"classify"] objectAtIndex:indexPath.row][@"text"];
+    //NSLog(@"section = %@",mitbbsCell.headString);
     mitbbsCell.mitClassifyUrl = [_sectionText[@"classify"] objectAtIndex:indexPath.row][@"url"];
-    NSLog(@"rows = %d",indexPath.row);
-    NSLog(@"headString = %@",mitbbsCell.headString);
-    NSLog(@"mitClassifyData = %@",mitbbsCell.mitClassifyUrl);
     return mitbbsCell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

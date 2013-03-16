@@ -9,27 +9,34 @@
 #import "MitbbsTableViewCell.h"
 #import "TFHpple.h"
 #import "SecondViewController.h"
+//#import "CellsTableViewCell.h"
 
 @implementation MitbbsTableViewCell
 @synthesize mitbbsTableViewCellDelegate = _mitbbsTableViewCellDelegate;
 
--(NSMutableArray *)getHtmlData:(NSURL *)url
+-(void)getHtmlData:(NSURL *)url
 {
     NSData *getHtmlDatas = [NSData dataWithContentsOfURL:url];
+//    NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+//    NSString *htmlData = [[NSString alloc] initWithData:getHtmlDatas encoding:enc];
+//    NSData *newHtmlDataWithUTF8 = [htmlData dataUsingEncoding:NSUTF8StringEncoding];
+    //NSLog(@"newHtmlDataWithUTF8 = %@",newHtmlDataWithUTF8);
     TFHpple *getHtmlParser = [TFHpple hppleWithHTMLData:getHtmlDatas];
     NSString *getHtmlXpathQueryString = @"//a[@class='news1']";
     
     NSArray *getHtmlNodes = [getHtmlParser searchWithXPathQuery:getHtmlXpathQueryString];
+    NSLog(@"getHtmlNodes = %@",getHtmlNodes);
     NSMutableArray *newArray = [[NSMutableArray alloc] initWithCapacity:0];
     for (TFHppleElement *getHtmlElement in getHtmlNodes)
     {
-        GetHtmlData *getHtmlData = [[GetHtmlData alloc] init];
+        ArticleInformation *getHtmlData = [[ArticleInformation alloc] init];
         [newArray addObject:getHtmlData];
         
         getHtmlData.title = [[getHtmlElement firstChild] content];
         getHtmlData.url   = [getHtmlElement objectForKey:@"href"];
     }
-    return newArray;
+    _mitData = newArray;
+    [_tableViewCellTable reloadData];
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -63,7 +70,7 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return 100;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -75,11 +82,22 @@
         cell.transform = CGAffineTransformMakeRotation(M_PI / 2);
         _headLabel.text = _headString;
     }
-    _mitData = [self getHtmlData:[NSURL URLWithString:_mitClassifyUrl]];
-    GetHtmlData *thisTutorial = [_mitData objectAtIndex:indexPath.row];
-    [[cell textLabel] setText:thisTutorial.title];
+    dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(concurrentQueue, ^(void)
+                   {
+                       [self getHtmlData:[NSURL URLWithString:_mitClassifyUrl]];
+                       ArticleInformation *thisArticleInformation = [_mitData objectAtIndex:indexPath.row];
+                       dispatch_async(dispatch_get_main_queue(), ^(void)
+                                      {
+                                          NSString *titleText = [thisArticleInformation.title stringByReplacingOccurrencesOfString:@"●" withString:@""];
+                                          cell.textLabel.text = titleText;
+                                      });
+                   });
+    //cell.newsUrl = _mitClassifyUrl;
+//    [[cell textLabel] setText:thisTutorial.title];
     cell.textLabel.numberOfLines = 0;//相当于无行数限制
     cell.textLabel.lineBreakMode = NSLineBreakByCharWrapping;
+    
     return cell;
 }
 

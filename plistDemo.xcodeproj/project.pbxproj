@@ -24,7 +24,7 @@
 		C233A4CC16DCFD7800420868 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C233A4CB16DCFD7800420868 /* libxml2.dylib */; };
 		C23A1EBA16E6267F0090CB9A /* MitbbsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A1EB916E6267F0090CB9A /* MitbbsTableViewCell.m */; };
 		C23A1EC516E631390090CB9A /* 123@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C23A1EC416E631390090CB9A /* 123@2x.png */; };
-		C23A1ED916E655770090CB9A /* GetHtmlData.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A1ED816E655770090CB9A /* GetHtmlData.m */; };
+		C23A1ED916E655770090CB9A /* ArticleInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A1ED816E655770090CB9A /* ArticleInformation.m */; };
 		C263191D16DF3CB00015E696 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C263191C16DF3CB00015E696 /* QuartzCore.framework */; };
 		C28E477016E8E49B00C37651 /* pagecornerlarge.png in Resources */ = {isa = PBXBuildFile; fileRef = C28E476E16E8E49B00C37651 /* pagecornerlarge.png */; };
 		C28E477116E8E49B00C37651 /* pagecornerlarge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C28E476F16E8E49B00C37651 /* pagecornerlarge@2x.png */; };
@@ -78,8 +78,8 @@
 		C23A1EB816E6267F0090CB9A /* MitbbsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MitbbsTableViewCell.h; sourceTree = "<group>"; };
 		C23A1EB916E6267F0090CB9A /* MitbbsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MitbbsTableViewCell.m; sourceTree = "<group>"; };
 		C23A1EC416E631390090CB9A /* 123@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123@2x.png"; sourceTree = "<group>"; };
-		C23A1ED716E655770090CB9A /* GetHtmlData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetHtmlData.h; sourceTree = "<group>"; };
-		C23A1ED816E655770090CB9A /* GetHtmlData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetHtmlData.m; sourceTree = "<group>"; };
+		C23A1ED716E655770090CB9A /* ArticleInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleInformation.h; sourceTree = "<group>"; };
+		C23A1ED816E655770090CB9A /* ArticleInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleInformation.m; sourceTree = "<group>"; };
 		C263191C16DF3CB00015E696 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C28E476E16E8E49B00C37651 /* pagecornerlarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pagecornerlarge.png; sourceTree = "<group>"; };
 		C28E476F16E8E49B00C37651 /* pagecornerlarge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pagecornerlarge@2x.png"; sourceTree = "<group>"; };
@@ -227,8 +227,8 @@
 		C23A1ED616E655570090CB9A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C23A1ED716E655770090CB9A /* GetHtmlData.h */,
-				C23A1ED816E655770090CB9A /* GetHtmlData.m */,
+				C23A1ED716E655770090CB9A /* ArticleInformation.h */,
+				C23A1ED816E655770090CB9A /* ArticleInformation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -363,7 +363,7 @@
 				C233A4C516DCD34400420868 /* TFHppleElement.m in Sources */,
 				C233A4C816DCD35200420868 /* XPathQuery.m in Sources */,
 				C23A1EBA16E6267F0090CB9A /* MitbbsTableViewCell.m in Sources */,
-				C23A1ED916E655770090CB9A /* GetHtmlData.m in Sources */,
+				C23A1ED916E655770090CB9A /* ArticleInformation.m in Sources */,
 				C2A24ABD16EB370F00A2E40E /* FlickTabButton.m in Sources */,
 				C2A24ABE16EB370F00A2E40E /* FlickTableViewController.m in Sources */,
 				C2A24ABF16EB370F00A2E40E /* FlickTabView.m in Sources */,

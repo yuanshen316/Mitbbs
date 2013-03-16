@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GetHtmlData.h"
+#import "ArticleInformation.h"
 
 @protocol MitbbsTableViewCellDelegate;
 

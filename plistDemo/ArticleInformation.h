@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GetHtmlData : NSObject
+@interface ArticleInformation : NSObject
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *url;

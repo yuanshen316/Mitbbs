@@ -12,5 +12,6 @@
 {
     
 }
-@property (strong, nonatomic) NSString *newsUrl;
+@property (copy, nonatomic) NSString *newsUrl;
+@property (copy, nonatomic) NSString *newsTitle;
 @end

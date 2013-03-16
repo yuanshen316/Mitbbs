@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        NSLog(@"Welcome");
+        NSLog(@"title = %@",_newsTitle);
     }
     return self;
 }
@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.title = _newsTitle;
 }
 
 - (void)didReceiveMemoryWarning
