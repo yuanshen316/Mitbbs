@@ -1,15 +1,13 @@
 //
 //  RootViewController.m
-//  plistDemo
+//  Mitbbs
 //
-//  Created by Yuan Junsheng on 13-2-26.
+//  Created by Yuan Junsheng on 13-3-16.
 //  Copyright (c) 2013年 Yuan Junsheng. All rights reserved.
 //
 
 #import "RootViewController.h"
-#import "MitbbsTableViewCell.h"
-#import "SecondViewController.h"
-
+#import "NewsInDetailViewController.h"
 
 @interface RootViewController ()
 
@@ -24,6 +22,7 @@
     _plistData = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -35,10 +34,10 @@
     self.title = @"Mitbbs";
     self.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbarBackBlack.png"] forBarMetrics:UIBarMetricsDefault];
-    //NSLog(@"controlData = %@",_plistData);
+    
     UIBarButtonItem *selfBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"profileBarButton.png"] style:UIBarButtonItemStyleDone target:self action:nil];
     self.navigationItem.rightBarButtonItem = selfBtn;
-
+    
     _tableViews = [[UITableView alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.height)];
     _tableViews.dataSource = self;
     _tableViews.delegate = self;
@@ -66,10 +65,9 @@
 - (NSString*)scrollTabView:(FlickTabView*)scrollTabView titleForTabAtIndex:(NSInteger)index {
     
     NSDictionary *sectionTitle = [_plistData objectAtIndex:index];
-    NSLog(@"sectionTitle = %@",sectionTitle[@"text"]);
-	return sectionTitle[@"text"];
+    //NSLog(@"sectionTitle = %@",sectionTitle[@"menustext"]);
+	return sectionTitle[@"menustext"];
 }
-
 #pragma mark TableViewDelegate
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -78,37 +76,37 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    _sectionText = [_plistData objectAtIndex:_selectNum];
-    return [_sectionText[@"classify"] count];
+    _categoryMessage = [_plistData objectAtIndex:_selectNum];
+    //NSLog(@"categoryMessage = %@",_categoryMessage);
+    return [_categoryMessage[@"classify"] count];
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *identity = @"cell";
-    MitbbsTableViewCell *mitbbsCell = (MitbbsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identity];
-//    if (mitbbsCell == nil)
-//    {
-        mitbbsCell = [[MitbbsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identity];
-//    }
-//    else
-//    {
-//        mitbbsCell = [[MitbbsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identity];
-//    }
-    mitbbsCell.mitbbsTableViewCellDelegate = self;
+    CategoryCell *mitbbsCell = (CategoryCell *)[tableView dequeueReusableCellWithIdentifier:identity];
+    _parserHtml = [[ParserHtml alloc] init];
+    _parserHtml.categoryData = _categoryMessage[@"classify"];
+    _categoryNews = [_parserHtml data];
+    //NSLog(@"categoryNews = %@",_categoryNews);
+    mitbbsCell = [[CategoryCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identity];
+    mitbbsCell.CategoryCellDelegate = self;
     mitbbsCell.selectionStyle = UITableViewCellSelectionStyleNone;
-    mitbbsCell.headString = [_sectionText[@"classify"] objectAtIndex:indexPath.row][@"text"];
-    //NSLog(@"section = %@",mitbbsCell.headString);
-    mitbbsCell.mitClassifyUrl = [_sectionText[@"classify"] objectAtIndex:indexPath.row][@"url"];
+    
+    
+    mitbbsCell.headString = [_categoryMessage[@"classify"] objectAtIndex:indexPath.row][@"text"];
+    mitbbsCell.newsData = [_categoryNews objectAtIndex:indexPath.row];
+    //NSLog(@"newdata = %@",mitbbsCell.newsData);
     return mitbbsCell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 140;
 }
-
--(void)didSelectRows
+-(void)didSelectRows:(NSString *)url
 {
-    SecondViewController *secondViewController = [[SecondViewController alloc] initWithNibName:nil bundle:nil];
-    [self.navigationController pushViewController:secondViewController animated:YES];
+    NewsInDetailViewController *newsInDetailView = [[NewsInDetailViewController alloc] initWithNibName:nil bundle:nil];
+    newsInDetailView.newsUrl = url;
+    [self.navigationController pushViewController:newsInDetailView animated:YES];
 }
 
 @end

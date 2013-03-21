@@ -36,8 +36,6 @@ static NSString * const TFHppleNodeChildrenKey          = @"nodeChildArray";
 static NSString * const TFHppleNodeAttributeArrayKey    = @"nodeAttributeArray";
 static NSString * const TFHppleNodeAttributeNameKey     = @"attributeName";
 
-static NSString * const TFHppleTextNodeName            = @"text";
-
 @interface TFHppleElement ()
 @property (nonatomic, unsafe_unretained, readwrite) TFHppleElement *parent;
 @end
@@ -88,7 +86,9 @@ static NSString * const TFHppleTextNodeName            = @"text";
 {
   NSArray * children = self.children;
   if (children.count)
+  {
     return [children objectAtIndex:0];
+  }
   return nil;
 }
 
@@ -97,10 +97,8 @@ static NSString * const TFHppleTextNodeName            = @"text";
 {
   NSMutableDictionary * translatedAttributes = [NSMutableDictionary dictionary];
   for (NSDictionary * attributeDict in [node objectForKey:TFHppleNodeAttributeArrayKey]) {
-      if ([attributeDict objectForKey:TFHppleNodeContentKey] && [attributeDict objectForKey:TFHppleNodeAttributeNameKey]) {
-          [translatedAttributes setObject:[attributeDict objectForKey:TFHppleNodeContentKey]
-                                   forKey:[attributeDict objectForKey:TFHppleNodeAttributeNameKey]];
-      }
+    [translatedAttributes setObject:[attributeDict objectForKey:TFHppleNodeContentKey]
+                             forKey:[attributeDict objectForKey:TFHppleNodeAttributeNameKey]];
   }
   return translatedAttributes;
 }
@@ -113,88 +111,6 @@ static NSString * const TFHppleTextNodeName            = @"text";
 - (id) description
 {
   return [node description];
-}
-
-- (BOOL)hasChildren
-{
-    if ([node objectForKey:TFHppleNodeChildrenKey])
-        return YES;
-    else
-        return NO;
-}
-
-- (BOOL)isTextNode
-{
-    // we must distinguish between real text nodes and standard nodes with tha name "text" (<text>)
-    // real text nodes must have content
-    if ([self.tagName isEqualToString:TFHppleTextNodeName] && (self.content))
-        return YES;
-    else
-        return NO;
-}
-
-- (NSArray*) childrenWithTagName:(NSString*)tagName
-{
-    NSMutableArray* matches = [NSMutableArray array];
-    
-    for (TFHppleElement* child in self.children)
-    {
-        if ([child.tagName isEqualToString:tagName])
-            [matches addObject:child];
-    }
-    
-    return matches;
-}
-
-- (TFHppleElement *) firstChildWithTagName:(NSString*)tagName
-{
-    for (TFHppleElement* child in self.children)
-    {
-        if ([child.tagName isEqualToString:tagName])
-            return child;
-    }
-    
-    return nil;
-}
-
-- (NSArray*) childrenWithClassName:(NSString*)className
-{
-    NSMutableArray* matches = [NSMutableArray array];
-    
-    for (TFHppleElement* child in self.children)
-    {
-        if ([[child objectForKey:@"class"] isEqualToString:className])
-            [matches addObject:child];
-    }
-    
-    return matches;
-}
-
-- (TFHppleElement *) firstChildWithClassName:(NSString*)className
-{
-    for (TFHppleElement* child in self.children)
-    {
-        if ([[child objectForKey:@"class"] isEqualToString:className])
-            return child;
-    }
-    
-    return nil;
-}
-
-- (TFHppleElement *) firstTextChild;
-{
-    for (TFHppleElement* child in self.children)
-    {
-        if ([child isTextNode])
-            return child;
-    }
-    
-    return [self firstChildWithTagName:TFHppleTextNodeName];
-}
-
-- (NSString *) text
-{
-    return self.firstTextChild.content;
 }
 
 @end

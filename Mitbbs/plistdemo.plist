@@ -3,7 +3,7 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>text</key>
+		<key>menustext</key>
 		<string>新闻中心</string>
 		<key>classify</key>
 		<array>
@@ -196,7 +196,7 @@
 		</array>
 	</dict>
 	<dict>
-		<key>text</key>
+		<key>menustext</key>
 		<string>海外生活</string>
 		<key>classify</key>
 		<array>
@@ -491,7 +491,7 @@
 		</array>
 	</dict>
 	<dict>
-		<key>text</key>
+		<key>menustext</key>
 		<string>华人世界</string>
 		<key>classify</key>
 		<array>
@@ -906,7 +906,7 @@
 		</array>
 	</dict>
 	<dict>
-		<key>text</key>
+		<key>menustext</key>
 		<string>体育健身</string>
 		<key>classify</key>
 		<array>
@@ -1177,7 +1177,7 @@
 		</array>
 	</dict>
 	<dict>
-		<key>text</key>
+		<key>menustext</key>
 		<string>娱乐休闲</string>
 		<key>classify</key>
 		<array>
@@ -1436,7 +1436,7 @@
 		</array>
 	</dict>
 	<dict>
-		<key>text</key>
+		<key>menustext</key>
 		<string>情感杂想</string>
 		<key>classify</key>
 		<array>
@@ -1569,7 +1569,7 @@
 		</array>
 	</dict>
 	<dict>
-		<key>text</key>
+		<key>menustext</key>
 		<string>文学艺术</string>
 		<key>classify</key>
 		<array>
@@ -1720,7 +1720,7 @@
 		</array>
 	</dict>
 	<dict>
-		<key>text</key>
+		<key>menustext</key>
 		<string>校友联谊</string>
 		<key>classify</key>
 		<array>
@@ -2087,7 +2087,7 @@
 		</array>
 	</dict>
 	<dict>
-		<key>text</key>
+		<key>menustext</key>
 		<string>乡里乡情</string>
 		<key>classify</key>
 		<array>
@@ -2244,7 +2244,7 @@
 		</array>
 	</dict>
 	<dict>
-		<key>text</key>
+		<key>menustext</key>
 		<string>电脑网络</string>
 		<key>classify</key>
 		<array>
@@ -2395,7 +2395,7 @@
 		</array>
 	</dict>
 	<dict>
-		<key>text</key>
+		<key>menustext</key>
 		<string>学术学科</string>
 		<key>classify</key>
 		<array>

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>plistDemo.xcscheme</key>
+		<key>Mitbbs.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C233A48816DCD19300420868</key>
+		<key>C202528C16F443E6009696AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

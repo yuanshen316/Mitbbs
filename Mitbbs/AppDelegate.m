@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  plistDemo
+//  Mitbbs
 //
-//  Created by Yuan Junsheng on 13-2-26.
+//  Created by Yuan Junsheng on 13-3-16.
 //  Copyright (c) 2013年 Yuan Junsheng. All rights reserved.
 //
 
@@ -14,12 +14,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    _rootViewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
-    _navigationController = [[UINavigationController alloc] initWithRootViewController:_rootViewController];
-    
-    self.window.rootViewController = _navigationController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    _rootViewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
+    _navigationController = [[UINavigationController alloc] initWithRootViewController:_rootViewController];
+    self.window.rootViewController = _navigationController;
     return YES;
 }
 

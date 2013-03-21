@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C233A48816DCD19300420868"
-               BuildableName = "plistDemo.app"
-               BlueprintName = "plistDemo"
-               ReferencedContainer = "container:plistDemo.xcodeproj">
+               BlueprintIdentifier = "C202528C16F443E6009696AD"
+               BuildableName = "Mitbbs.app"
+               BlueprintName = "Mitbbs"
+               ReferencedContainer = "container:Mitbbs.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C233A48816DCD19300420868"
-            BuildableName = "plistDemo.app"
-            BlueprintName = "plistDemo"
-            ReferencedContainer = "container:plistDemo.xcodeproj">
+            BlueprintIdentifier = "C202528C16F443E6009696AD"
+            BuildableName = "Mitbbs.app"
+            BlueprintName = "Mitbbs"
+            ReferencedContainer = "container:Mitbbs.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C233A48816DCD19300420868"
-            BuildableName = "plistDemo.app"
-            BlueprintName = "plistDemo"
-            ReferencedContainer = "container:plistDemo.xcodeproj">
+            BlueprintIdentifier = "C202528C16F443E6009696AD"
+            BuildableName = "Mitbbs.app"
+            BlueprintName = "Mitbbs"
+            ReferencedContainer = "container:Mitbbs.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C233A48816DCD19300420868"
-            BuildableName = "plistDemo.app"
-            BlueprintName = "plistDemo"
-            ReferencedContainer = "container:plistDemo.xcodeproj">
+            BlueprintIdentifier = "C202528C16F443E6009696AD"
+            BuildableName = "Mitbbs.app"
+            BlueprintName = "Mitbbs"
+            ReferencedContainer = "container:Mitbbs.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

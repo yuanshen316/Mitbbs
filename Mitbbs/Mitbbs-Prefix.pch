@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'plistDemo' target in the 'plistDemo' project
+// Prefix header for all source files of the 'Mitbbs' target in the 'Mitbbs' project
 //
 
 #import <Availability.h>

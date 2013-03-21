@@ -1,8 +1,8 @@
 //
 //  main.m
-//  plistDemo
+//  Mitbbs
 //
-//  Created by Yuan Junsheng on 13-2-26.
+//  Created by Yuan Junsheng on 13-3-16.
 //  Copyright (c) 2013年 Yuan Junsheng. All rights reserved.
 //
 
