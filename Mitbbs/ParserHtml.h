@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Database.h"
 
 @interface ParserHtml : NSObject
 
-@property (nonatomic, strong) NSMutableArray *articleString;
+@property (nonatomic, strong) NSMutableArray *articleData;
 @property (nonatomic, strong) NSMutableArray *categoryData;//小分类信息
 @property (nonatomic, strong) NSMutableArray *newsData;
-@property (nonatomic, strong) NSMutableDictionary *newsListString;
+@property (nonatomic, copy)   NSString *menusID;
 
--(NSMutableArray *)data;
+-(NSMutableArray *)selectMenusData:(NSMutableDictionary *)dict;
+
 @end

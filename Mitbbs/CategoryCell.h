@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ArticleInformation.h"
+#import "ArticleList.h"
 
 @protocol CategoryCellDelegate;
 
@@ -18,12 +18,13 @@
     NSMutableArray *_mitData;
     NSInteger _selectRowNum;
     id mitbbsTableViewCellDelegate;
+    ArticleList *article;
 }
 @property (nonatomic, copy) NSString *headString;
 @property (nonatomic, retain) NSString *mitClassifyUrl;
 @property (nonatomic, assign) NSInteger selectRowsNum;
-@property (nonatomic, strong) NSMutableDictionary *newsData;
-
+@property (nonatomic, strong) NSMutableArray *newsData;
+@property (nonatomic, strong) ArticleList *article;
 @property (nonatomic, assign) id CategoryCellDelegate;
 @end
 

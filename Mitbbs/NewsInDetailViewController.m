@@ -8,7 +8,6 @@
 
 #import "NewsInDetailViewController.h"
 #import "TFHpple.h"
-#import "ArticleInformation.h"
 
 @interface NewsInDetailViewController ()
 
@@ -51,9 +50,9 @@
     NSMutableArray *newArray = [[NSMutableArray alloc] initWithCapacity:0];
     for (TFHppleElement *newsElement in newsHtmlNodes)
     {
-        ArticleInformation *thisArticle = [[ArticleInformation alloc] init];
-        [newArray addObject:thisArticle];
-        thisArticle.title = [[newsElement firstChild] content];
+//        ArticleInformation *thisArticle = [[ArticleInformation alloc] init];
+//        [newArray addObject:thisArticle];
+//        thisArticle.ntitle = [[newsElement firstChild] content];
     }
     _newsData = newArray;
 }

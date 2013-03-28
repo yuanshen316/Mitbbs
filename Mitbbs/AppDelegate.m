@@ -14,11 +14,16 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    
     _rootViewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
     _navigationController = [[UINavigationController alloc] initWithRootViewController:_rootViewController];
     self.window.rootViewController = _navigationController;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    //[NSThread detachNewThreadSelector:@selector(getDatabaseData) toTarget:self withObject:nil];
+    
     return YES;
 }
 
@@ -48,5 +53,14 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+//-(void)getDatabaseData
+//{
+//    Database *mitDatabase = [[Database alloc] init];
+//    [mitDatabase openDatabase];
+//    NSMutableArray *mitData = [mitDatabase getAllNewsData];
+//    NSLog(@"mitData count = %d",mitData.count);
+//}
 
 @end

@@ -7,17 +7,20 @@
 //
 
 #import "FlickTableViewController.h"
-#import "ParserHtml.h"
 #import "CategoryCell.h"
+#import "Database.h"
+#import "ParserHtml.h"
 
 @interface RootViewController : FlickTableViewController<UITableViewDataSource, UITableViewDelegate, CategoryCellDelegate>
 {
     NSMutableArray *_plistData;
-    NSDictionary *_categoryMessage;
+    NSMutableDictionary *_categoryMessage;
     NSInteger _selectNum;
     UITableView *_tableViews;
 }
+@property (nonatomic, strong) NSMutableArray *plistData;
 @property (nonatomic, strong) NSMutableArray *categoryNews;
-@property (nonatomic, strong) ParserHtml *parserHtml;
--(void)didSelectRows;
+@property (nonatomic, strong) Database *mitDatabase;
+@property (nonatomic, strong) ParserHtml *parser;
+-(void)didSelectRows:(NSString *)url;
 @end
