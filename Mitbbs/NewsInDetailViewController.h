@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewsInDetailViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface NewsInDetailViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *_newsTable;
 }

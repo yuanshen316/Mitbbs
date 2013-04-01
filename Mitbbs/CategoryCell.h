@@ -15,7 +15,6 @@
 {
     UITableView *_CategoryCellTable;
     UILabel *_headLabel;
-    NSMutableArray *_mitData;
     NSInteger _selectRowNum;
     id mitbbsTableViewCellDelegate;
     ArticleList *article;
@@ -30,6 +29,6 @@
 
 @protocol CategoryCellDelegate <NSObject>
 
--(void)didSelectRows:(NSString *)url;
+-(void)didSelectRows:(NSString *)newsurl;
 
 @end

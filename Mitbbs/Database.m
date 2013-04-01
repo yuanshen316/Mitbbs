@@ -69,58 +69,30 @@
 
 -(BOOL)insertDataToTable:(ArticleList *)article
 {
-         //[self openDatabase];
-//    if (![self isTableOK])
-//    {
-//        [self createTable];
-//    }
-    FMResultSet *rs = [mitbbsDatabase executeQuery:@"SELECT * FROM ? WHERE ? = ?",TABLENAME,NEWSTITLE,article.articelTitle];
+    FMResultSet *rs = [mitbbsDatabase executeQuery:@"SELECT * FROM ListOfNews WHERE newsTitle = ?",article.articelTitle];
     if ([rs next])
     {
-        [mitbbsDatabase executeUpdate:@"update ? set ? = ?, ? = ?, ? = ? where ? = ?",TABLENAME, MENUSID, article.menusId, CATEGORYID, article.categoryId, NEWSTITLE, article.articelTitle];
-        NSLog(@"数据修改成功");
-        return YES;
+        BOOL update = [mitbbsDatabase executeUpdate:@"UPDATE ListOfNews SET menusID = ?, categoryID = ?, newsUrl = ? where newsTitle = ?", article.menusId, article.categoryId, article.articelUrl, article.articelTitle];
+        if (update)
+        {
+            NSLog(@"数据修改成功");
+            return YES;
+        }
+        NSLog(@"数据插入失败");
+        return NO;
     }
     else
     {
-        [mitbbsDatabase executeUpdate:@"INSERT INTO ? (?, ?, ?, ?) VALUES (?, ?, ?, ?)",TABLENAME, MENUSID, CATEGORYID, NEWSTITLE, NEWSURL, article.menusId, article.categoryId, article.articelTitle, article.articelUrl];
-        NSLog(@"数据插入成功");
-        return YES;
+        BOOL insert = [mitbbsDatabase executeUpdate:@"INSERT INTO ListOfNews (menusID, categoryID, newsTitle, newsUrl) VALUES (?, ?, ?, ?)", article.menusId, article.categoryId, article.articelTitle, article.articelUrl];
+        if (insert) {
+            NSLog(@"数据插入成功");
+            return YES;
+        }
+        NSLog(@"数据插入失败");
+        return NO;
     }
     NSLog(@"数据插入失败");
     return NO;
-//    if ([self openDatabase] == YES)
-//    {
-//        FMResultSet *rs = [mitbbsDatabase executeQuery:@"SELECT * FROM ? WHERE ? = ?",TABLENAME,NEWSTITLE,article.articelTitle];
-//        if ([rs next])
-//        {
-//            [mitbbsDatabase executeUpdate:@"update ? set ? = ?, ? = ? where ? = ?",TABLENAME, MENUSID, article.menusId, CATEGORYID, article.categoryId, NEWSTITLE, article.articelTitle];
-//            NSLog(@"数据修改成功");
-//            return YES;
-//        }
-//        else
-//        {
-//            [mitbbsDatabase executeUpdate:@"INSERT INTO ? (?, ?, ?, ?) VALUES (?, ?, ?, ?)",TABLENAME, MENUSID, CATEGORYID, NEWSTITLE, NEWSURL, article.menusId, article.categoryId, article.articelTitle, article.articelUrl];
-//            NSLog(@"数据插入成功");
-//            return YES;
-//        }
-//        sqlite3_stmt *statement = NULL;
-//        NSString *insertSql = [NSString stringWithFormat:@"INSERT INTO '%@' ('%@', '%@','%@','%@') VALUES ('%@', '%@', '%@','%@')",TABLENAME, MENUSID, CATEGORYID, NEWSTITLE, NEWSURL,article.menusId, article.categoryId, article.articelTitle, article.articelUrl];
-//        [self execSql:insertSql];
-//        int success = sqlite3_step(statement);
-//        sqlite3_finalize(statement);
-//        if (success == SQLITE_ERROR)
-//        {
-//            NSLog(@"Error:fail to insert into the database with message.");
-//            return NO;
-//        }
-//        return YES;
-//    }
-//    else
-//    {
-//        NSLog(@"数据库打开失败");
-//        return NO;
-//    }
 }
 
 -(NSMutableArray *)getAllNewsData:(NSString *)menusNum and:(NSString *)categoryNum
@@ -129,9 +101,11 @@
     [self openDatabase];
     if ([self isTableOK])
     {
-        FMResultSet *rs = [mitbbsDatabase executeQuery:@"select * from ?",TABLENAME];
+        NSLog(@"表已存在,开始查询");
+        FMResultSet *rs = [mitbbsDatabase executeQuery:@"SELECT * FROM ListOfNews"];
         while ([rs next])
         {
+            
             ArticleList *article = [[ArticleList alloc] init];
             article.menusId      = [rs stringForColumn:MENUSID];
             article.categoryId   = [rs stringForColumn:CATEGORYID];
@@ -144,38 +118,20 @@
         }
         if (newsData.count == 0)
         {
+            [mitbbsDatabase close];
             return NULL;
         }
+        [mitbbsDatabase close];
+        NSLog(@"newsData count = %d",newsData.count);
         return newsData;
     }
+    [mitbbsDatabase close];
     return NULL;
-//    if (!mitbbsDatabase)
-//    {
-//        [self openDatabase];
-//    }
-//    [mitbbsDatabase setShouldCacheStatements:YES];//设定存储，对效率有所帮助
-//    if (![mitbbsDatabase tableExists:TABLENAME])
-//    {
-//        [self createTable];
-//        return nil;
-//    }
-//    FMResultSet *rs = [mitbbsDatabase executeQuery:@"select * from ?",TABLENAME];
-//    
-//    while ([rs next])
-//    {
-//        ArticleList *article = [[ArticleList alloc] init];
-//        article.menusId      = [rs stringForColumn:MENUSID];
-//        article.categoryId   = [rs stringForColumn:CATEGORYID];
-//        article.articelTitle = [rs stringForColumn:NEWSTITLE];
-//        article.articelUrl   = [rs stringForColumn:NEWSURL];
-//        [newsData addObject:article];
-//    }
-//    return newsData;
 }
 
 -(BOOL)isTableOK
 {
-    FMResultSet*rs = [mitbbsDatabase executeQuery:@"select * from ?",TABLENAME];
+    FMResultSet*rs = [mitbbsDatabase executeQuery:@"SELECT * FROM ListOfNews"];
     if ([rs next])
     {
         NSLog(@"Table已经存在");

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>menustext</key>
+		<string>新闻中心</string>
+		<key>classify</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>亚洲新闻(AsiaNews)</string>
+				<key>url</key>
+				<string>http://www.mitbbs.com/bbsdoc/AsiaNews.html</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

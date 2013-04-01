@@ -49,7 +49,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 100;
+    return _newsData.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -61,8 +61,10 @@
         cell.transform = CGAffineTransformMakeRotation(M_PI / 2);
         _headLabel.text = _headString;
     }
+    _article = [[ArticleList alloc] init];
     _article = [_newsData objectAtIndex:indexPath.row];
-    NSString *titleName = _article.articelTitle;
+    NSLog(@"当前cell中的新闻 = %@",[_newsData objectAtIndex:indexPath.row]);
+    NSString *titleName = (NSString *)_article.articelTitle;
     if (titleName == NULL)
     {
         cell.textLabel.text = NULL;
@@ -87,7 +89,8 @@
 {
     _selectRowNum = [indexPath row];
     NSLog(@"点击%d",_selectRowNum);
-    ArticleList *thisArticle = [_mitData objectAtIndex:_selectRowNum];
+    ArticleList *thisArticle = [_newsData objectAtIndex:_selectRowNum];
+    NSLog(@"thisArticle = %@",thisArticle.articelUrl);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [_CategoryCellDelegate didSelectRows:thisArticle.articelUrl];
 }

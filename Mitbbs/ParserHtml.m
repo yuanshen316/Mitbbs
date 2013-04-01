@@ -41,15 +41,9 @@
         getHtmlData.articelUrl    = [getHtmlElement objectForKey:@"href"];
         NSLog(@"articelTitle = %@",getHtmlData.articelTitle);
         NSLog(@"articleUrl = %@",getHtmlData.articelUrl);
-//        if (getHtmlData.articelTitle = NULL)
-//        {
-//            [self parserHtml:categoryUrl forNum:categoryNum];
-//        }
-        //getHtmlData.articelUrl    = [getHtmlElement objectForKey:@"href"];
-//        [db insertDataToTable:getHtmlData];
         [newArray addObject:getHtmlData];
     }
-    _articleData = newArray;
+    _articleData = newArray;//某一小分类的新闻列表
 }
 
 
@@ -80,8 +74,6 @@
 -(NSMutableArray *)selectMenusData:(NSMutableDictionary *)dict
 {
     NSInteger categoryCount = [dict[@"classify"] count];
-    
-    ArticleList *article = [[ArticleList alloc] init];
 
     NSMutableArray *newsList = [[NSMutableArray alloc] init];
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -100,8 +92,8 @@
         });
     }
     dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
-    article = [_articleData objectAtIndex:1];
-    return newsList;
+    NSLog(@"newsList.count = %d",newsList.count);
+    return newsList;//返回一大分类下所有小分类的所有新闻
 }
 
 @end

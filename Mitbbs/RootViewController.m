@@ -9,7 +9,8 @@
 #import "RootViewController.h"
 #import "NewsInDetailViewController.h"
 #import "ArticleList.h"
-#import "TFHpple.h"
+#import "MenusViewController.h"
+
 
 @interface RootViewController ()
 
@@ -20,13 +21,18 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"plistdemo" ofType:@"plist"];
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"UserSubscribe" ofType:@"plist"];
     _plistData = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
     if (self) {
         // Custom initialization
         
     }
     return self;
+}
+
+-(void)showMenusView
+{
+    MenusViewController *menusView = [[MenusViewController alloc] initWithNibName:nil bundle:nil];
 }
 
 - (void)viewDidLoad
@@ -38,10 +44,12 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbarBackBlack.png"] forBarMetrics:UIBarMetricsDefault];
     
+    UIBarButtonItem *menusBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"19-gear.png"] style:UIBarButtonItemStyleDone target:self action:@selector(showMenusView)];
     UIBarButtonItem *selfBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"profileBarButton.png"] style:UIBarButtonItemStyleDone target:self action:nil];
+    self.navigationItem.leftBarButtonItem = menusBtn;
     self.navigationItem.rightBarButtonItem = selfBtn;
     
-    _tableViews = [[UITableView alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.height)];
+    _tableViews = [[UITableView alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, 420.0)];
     _tableViews.dataSource = self;
     _tableViews.delegate = self;
     [self.view addSubview:_tableViews];
@@ -89,7 +97,7 @@
     static NSString *identity = @"cell";
     CategoryCell *mitbbsCell = (CategoryCell *)[tableView dequeueReusableCellWithIdentifier:identity];
     
-    NSMutableArray *categoryNew = [[NSMutableArray alloc] initWithCapacity:0];
+    NSMutableArray *categoryNew = [[NSMutableArray alloc] init];
     
     _mitDatabase = [[Database alloc] init];
     mitbbsCell = [[CategoryCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identity];
@@ -98,14 +106,19 @@
     
     mitbbsCell.headString = [_categoryMessage[@"classify"] objectAtIndex:indexPath.row][@"text"];//section的内容
     
-    _categoryNews = [_mitDatabase getAllNewsData:[NSString stringWithFormat:@"%d",_selectNum] and:[NSString stringWithFormat:@"%d",indexPath.row]];
+    _categoryNews = [_mitDatabase getAllNewsData:[NSString stringWithFormat:@"%d",_selectNum] and:[NSString stringWithFormat:@"%d",indexPath.row]];//从数据库中查找是新闻数据
     if (_categoryNews.count == 0)
     {
         NSLog(@"数据库中没有数据");
         _categoryNews = [self newsData];
+        NSLog(@"_categoryNews.count = %u",_categoryNews.count);
+        categoryNew = [self makeSureNewsForCategory:_categoryNews forRows:indexPath.row];//得到当前cell中的所有新闻
+        mitbbsCell.newsData = categoryNew;//第indexPath.row个小类的全部新闻
     }
-    categoryNew = [self makeSureNewsForCategory:_categoryNews forRows:indexPath.row];
-    mitbbsCell.newsData = categoryNew;//第indexPath.row个小类的全部新闻
+    else
+    {
+        mitbbsCell.newsData = _categoryNews;
+    }
     NSLog(@"RootViewController newdata = %@",mitbbsCell.newsData);
     return mitbbsCell;
 }
@@ -113,10 +126,11 @@
 {
     return 140;
 }
--(void)didSelectRows:(NSString *)url//点击cel进行页面跳转
+-(void)didSelectRows:(NSString *)newsurl//点击cel进行页面跳转
 {
+    NSLog(@"select News Url = %@",newsurl);
     NewsInDetailViewController *newsInDetailView = [[NewsInDetailViewController alloc] initWithNibName:nil bundle:nil];
-    newsInDetailView.newsUrl = url;
+    newsInDetailView.newsUrl = newsurl;
     [self.navigationController pushViewController:newsInDetailView animated:YES];
 }
 
@@ -126,9 +140,6 @@
     _parser = [[ParserHtml alloc] init];
     _parser.menusID = [NSString stringWithFormat:@"%d",_selectNum];
     newsListData = [_parser selectMenusData:_categoryMessage];//获取所有无序的小分类数据
-    ArticleList *ar = [[newsListData objectAtIndex:0] objectAtIndex:0];
-    NSLog(@"ar.articleTitle = %@",ar.articelTitle);
-    NSLog(@"ar.articleUrl = %@",ar.articelUrl);
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         [self insertData:newsListData];
@@ -151,7 +162,6 @@
     {
         NSMutableArray *categoryData = [newsData objectAtIndex:i];
         NSInteger newsNum = categoryData.count;
-        NSLog(@"newsNum = %d",newsNum);
         for (int a = 0; a<newsNum; a++)
         {
             thisArticle = [categoryData objectAtIndex:a];
@@ -176,10 +186,9 @@
             NSLog(@"CategoryId = %@",article.categoryId);
             NSLog(@"menusId = %@",article.menusId);
             NSLog(@"articleUrl = %@",article.articelUrl);
-            [categoryData addObject:categoryNews];
+            return categoryNews;
         }
     }
-    
     return categoryData;
 }
 
