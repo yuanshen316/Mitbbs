@@ -11,6 +11,7 @@
 @implementation CategoryCell
 
 @synthesize CategoryCellDelegate = _CategoryCellDelegate;
+@synthesize article = _article;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

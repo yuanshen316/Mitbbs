@@ -17,18 +17,7 @@
 		C20252A416F443E6009696AD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C20252A316F443E6009696AD /* Default.png */; };
 		C20252A616F443E6009696AD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C20252A516F443E6009696AD /* Default@2x.png */; };
 		C20252A816F443E6009696AD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C20252A716F443E6009696AD /* Default-568h@2x.png */; };
-		C20252B616F44464009696AD /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = C20252B316F44464009696AD /* XPathQuery.m */; };
 		C20252BE16F44F10009696AD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20252BD16F44F10009696AD /* RootViewController.m */; };
-		C20252D016F44FFC009696AD /* FlickTabButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C20252C216F44FFC009696AD /* FlickTabButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C20252D116F44FFC009696AD /* FlickTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20252C516F44FFC009696AD /* FlickTableViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C20252D216F44FFC009696AD /* FlickTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = C20252C716F44FFC009696AD /* FlickTabView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C20252D316F44FFC009696AD /* blue-vertical-line.png in Resources */ = {isa = PBXBuildFile; fileRef = C20252C916F44FFC009696AD /* blue-vertical-line.png */; };
-		C20252D416F44FFC009696AD /* flick-fade-lt.png in Resources */ = {isa = PBXBuildFile; fileRef = C20252CA16F44FFC009696AD /* flick-fade-lt.png */; };
-		C20252D516F44FFC009696AD /* flick-fade-rt.png in Resources */ = {isa = PBXBuildFile; fileRef = C20252CB16F44FFC009696AD /* flick-fade-rt.png */; };
-		C20252D616F44FFC009696AD /* flick-tab-bck.png in Resources */ = {isa = PBXBuildFile; fileRef = C20252CC16F44FFC009696AD /* flick-tab-bck.png */; };
-		C20252D716F44FFC009696AD /* flick-tab-over.png in Resources */ = {isa = PBXBuildFile; fileRef = C20252CD16F44FFC009696AD /* flick-tab-over.png */; };
-		C20252D816F44FFC009696AD /* uparrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C20252CE16F44FFC009696AD /* uparrow.png */; };
-		C20252D916F44FFC009696AD /* uparrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C20252CF16F44FFC009696AD /* uparrow@2x.png */; };
 		C20252DB16F45073009696AD /* plistdemo.plist in Resources */ = {isa = PBXBuildFile; fileRef = C20252DA16F45073009696AD /* plistdemo.plist */; };
 		C202530516F450BC009696AD /* 123@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C20252F816F450BC009696AD /* 123@2x.png */; };
 		C202530616F450BC009696AD /* blue-horizontal-line.png in Resources */ = {isa = PBXBuildFile; fileRef = C20252F916F450BC009696AD /* blue-horizontal-line.png */; };
@@ -49,22 +38,33 @@
 		C225AD4217091CEB0095A5B9 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = C225AD3E17091CEB0095A5B9 /* 19-gear.png */; };
 		C225AD7A1709A22E0095A5B9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C225AD791709A22E0095A5B9 /* QuartzCore.framework */; };
 		C225AD951709CE140095A5B9 /* UserSubscribe.plist in Resources */ = {isa = PBXBuildFile; fileRef = C225AD941709CE140095A5B9 /* UserSubscribe.plist */; };
+		C2567652170B174D0055D6DF /* FlickTabButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C2567644170B174D0055D6DF /* FlickTabButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C2567653170B174D0055D6DF /* FlickTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2567647170B174D0055D6DF /* FlickTableViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C2567654170B174D0055D6DF /* FlickTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2567649170B174D0055D6DF /* FlickTabView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C2567655170B174D0055D6DF /* blue-vertical-line.png in Resources */ = {isa = PBXBuildFile; fileRef = C256764B170B174D0055D6DF /* blue-vertical-line.png */; };
+		C2567656170B174D0055D6DF /* flick-fade-lt.png in Resources */ = {isa = PBXBuildFile; fileRef = C256764C170B174D0055D6DF /* flick-fade-lt.png */; };
+		C2567657170B174D0055D6DF /* flick-fade-rt.png in Resources */ = {isa = PBXBuildFile; fileRef = C256764D170B174D0055D6DF /* flick-fade-rt.png */; };
+		C2567658170B174D0055D6DF /* flick-tab-bck.png in Resources */ = {isa = PBXBuildFile; fileRef = C256764E170B174D0055D6DF /* flick-tab-bck.png */; };
+		C2567659170B174D0055D6DF /* flick-tab-over.png in Resources */ = {isa = PBXBuildFile; fileRef = C256764F170B174D0055D6DF /* flick-tab-over.png */; };
+		C256765A170B174D0055D6DF /* uparrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C2567650170B174D0055D6DF /* uparrow.png */; };
+		C256765B170B174D0055D6DF /* uparrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2567651170B174D0055D6DF /* uparrow@2x.png */; };
+		C2567667170B17540055D6DF /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = C256765E170B17540055D6DF /* FMDatabase.m */; };
+		C2567668170B17540055D6DF /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2567660170B17540055D6DF /* FMDatabaseAdditions.m */; };
+		C2567669170B17540055D6DF /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = C2567662170B17540055D6DF /* FMDatabasePool.m */; };
+		C256766A170B17540055D6DF /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C2567664170B17540055D6DF /* FMDatabaseQueue.m */; };
+		C256766B170B17540055D6DF /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = C2567666170B17540055D6DF /* FMResultSet.m */; };
+		C2567673170B175A0055D6DF /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = C256766E170B175A0055D6DF /* TFHpple.m */; };
+		C2567674170B175A0055D6DF /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C2567670170B175A0055D6DF /* TFHppleElement.m */; };
+		C2567675170B175A0055D6DF /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = C2567672170B175A0055D6DF /* XPathQuery.m */; };
 		C261CBBE16FDF87800EF9159 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C261CBBD16FDF87800EF9159 /* libsqlite3.dylib */; };
 		C261CBCD16FE05C200EF9159 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = C261CBCC16FE05C200EF9159 /* Database.m */; };
 		C261CBD416FED8A000EF9159 /* ArticleList.m in Sources */ = {isa = PBXBuildFile; fileRef = C261CBD316FED8A000EF9159 /* ArticleList.m */; };
-		C2658CAB16FFF7A400A695E9 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = C2658CA016FFF7A400A695E9 /* FMResultSet.m */; };
-		C2658CAD16FFF7A400A695E9 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C2658CA316FFF7A400A695E9 /* FMDatabaseQueue.m */; };
-		C2658CAE16FFF7A400A695E9 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = C2658CA516FFF7A400A695E9 /* FMDatabasePool.m */; };
-		C2658CAF16FFF7A400A695E9 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2658CA716FFF7A400A695E9 /* FMDatabaseAdditions.m */; };
-		C2658CB016FFF7A400A695E9 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = C2658CA916FFF7A400A695E9 /* FMDatabase.m */; };
 		C26712C61706B42200F63D2B /* NewsInDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26712C51706B42200F63D2B /* NewsInDetailCell.m */; };
 		C26712C81706B43E00F63D2B /* NewsInDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26712C71706B43E00F63D2B /* NewsInDetail.xib */; };
 		C26712CA1706D08900F63D2B /* blueline.png in Resources */ = {isa = PBXBuildFile; fileRef = C26712C91706D08900F63D2B /* blueline.png */; };
 		C2725C3016F978C40010D4FA /* ParserHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = C2725C2F16F978C40010D4FA /* ParserHtml.m */; };
 		C279491D16F456510075FB96 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C279491C16F456510075FB96 /* libxml2.dylib */; };
 		C2867C0A16FB215B000E9964 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2867C0916FB215B000E9964 /* CoreData.framework */; };
-		C2902674170487250057BC68 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C2902670170487250057BC68 /* TFHppleElement.m */; };
-		C2902675170487250057BC68 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = C2902672170487250057BC68 /* TFHpple.m */; };
 		C2BAB0E516F56034007F5901 /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BAB0E416F56034007F5901 /* CategoryCell.m */; };
 		C2BAB13216F5C35E007F5901 /* NewsInDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BAB13116F5C35D007F5901 /* NewsInDetailViewController.m */; };
 /* End PBXBuildFile section */
@@ -85,24 +85,8 @@
 		C20252A316F443E6009696AD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C20252A516F443E6009696AD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C20252A716F443E6009696AD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		C20252B216F44464009696AD /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPathQuery.h; path = ../XPathQuery.h; sourceTree = "<group>"; };
-		C20252B316F44464009696AD /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPathQuery.m; path = ../XPathQuery.m; sourceTree = "<group>"; };
 		C20252BC16F44F10009696AD /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		C20252BD16F44F10009696AD /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		C20252C116F44FFC009696AD /* FlickTabButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickTabButton.h; sourceTree = "<group>"; };
-		C20252C216F44FFC009696AD /* FlickTabButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickTabButton.m; sourceTree = "<group>"; };
-		C20252C316F44FFC009696AD /* FlickTabControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickTabControl.h; sourceTree = "<group>"; };
-		C20252C416F44FFC009696AD /* FlickTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickTableViewController.h; sourceTree = "<group>"; };
-		C20252C516F44FFC009696AD /* FlickTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickTableViewController.m; sourceTree = "<group>"; };
-		C20252C616F44FFC009696AD /* FlickTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickTabView.h; sourceTree = "<group>"; };
-		C20252C716F44FFC009696AD /* FlickTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickTabView.m; sourceTree = "<group>"; };
-		C20252C916F44FFC009696AD /* blue-vertical-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-vertical-line.png"; sourceTree = "<group>"; };
-		C20252CA16F44FFC009696AD /* flick-fade-lt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flick-fade-lt.png"; sourceTree = "<group>"; };
-		C20252CB16F44FFC009696AD /* flick-fade-rt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flick-fade-rt.png"; sourceTree = "<group>"; };
-		C20252CC16F44FFC009696AD /* flick-tab-bck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flick-tab-bck.png"; sourceTree = "<group>"; };
-		C20252CD16F44FFC009696AD /* flick-tab-over.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flick-tab-over.png"; sourceTree = "<group>"; };
-		C20252CE16F44FFC009696AD /* uparrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uparrow.png; sourceTree = "<group>"; };
-		C20252CF16F44FFC009696AD /* uparrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uparrow@2x.png"; sourceTree = "<group>"; };
 		C20252DA16F45073009696AD /* plistdemo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = plistdemo.plist; sourceTree = "<group>"; };
 		C20252F816F450BC009696AD /* 123@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123@2x.png"; sourceTree = "<group>"; };
 		C20252F916F450BC009696AD /* blue-horizontal-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-horizontal-line.png"; sourceTree = "<group>"; };
@@ -123,21 +107,41 @@
 		C225AD3E17091CEB0095A5B9 /* 19-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-gear.png"; sourceTree = "<group>"; };
 		C225AD791709A22E0095A5B9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C225AD941709CE140095A5B9 /* UserSubscribe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserSubscribe.plist; sourceTree = "<group>"; };
+		C2567643170B174D0055D6DF /* FlickTabButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickTabButton.h; sourceTree = "<group>"; };
+		C2567644170B174D0055D6DF /* FlickTabButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickTabButton.m; sourceTree = "<group>"; };
+		C2567645170B174D0055D6DF /* FlickTabControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickTabControl.h; sourceTree = "<group>"; };
+		C2567646170B174D0055D6DF /* FlickTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickTableViewController.h; sourceTree = "<group>"; };
+		C2567647170B174D0055D6DF /* FlickTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickTableViewController.m; sourceTree = "<group>"; };
+		C2567648170B174D0055D6DF /* FlickTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickTabView.h; sourceTree = "<group>"; };
+		C2567649170B174D0055D6DF /* FlickTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickTabView.m; sourceTree = "<group>"; };
+		C256764B170B174D0055D6DF /* blue-vertical-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-vertical-line.png"; sourceTree = "<group>"; };
+		C256764C170B174D0055D6DF /* flick-fade-lt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flick-fade-lt.png"; sourceTree = "<group>"; };
+		C256764D170B174D0055D6DF /* flick-fade-rt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flick-fade-rt.png"; sourceTree = "<group>"; };
+		C256764E170B174D0055D6DF /* flick-tab-bck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flick-tab-bck.png"; sourceTree = "<group>"; };
+		C256764F170B174D0055D6DF /* flick-tab-over.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flick-tab-over.png"; sourceTree = "<group>"; };
+		C2567650170B174D0055D6DF /* uparrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uparrow.png; sourceTree = "<group>"; };
+		C2567651170B174D0055D6DF /* uparrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uparrow@2x.png"; sourceTree = "<group>"; };
+		C256765D170B17540055D6DF /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		C256765E170B17540055D6DF /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		C256765F170B17540055D6DF /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		C2567660170B17540055D6DF /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		C2567661170B17540055D6DF /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		C2567662170B17540055D6DF /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		C2567663170B17540055D6DF /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		C2567664170B17540055D6DF /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		C2567665170B17540055D6DF /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		C2567666170B17540055D6DF /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		C256766D170B175A0055D6DF /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		C256766E170B175A0055D6DF /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		C256766F170B175A0055D6DF /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		C2567670170B175A0055D6DF /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		C2567671170B175A0055D6DF /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		C2567672170B175A0055D6DF /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		C261CBBD16FDF87800EF9159 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		C261CBCB16FE05C200EF9159 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		C261CBCC16FE05C200EF9159 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		C261CBD216FED8A000EF9159 /* ArticleList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleList.h; sourceTree = "<group>"; };
 		C261CBD316FED8A000EF9159 /* ArticleList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleList.m; sourceTree = "<group>"; };
-		C2658CA016FFF7A400A695E9 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		C2658CA116FFF7A400A695E9 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		C2658CA316FFF7A400A695E9 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		C2658CA416FFF7A400A695E9 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		C2658CA516FFF7A400A695E9 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		C2658CA616FFF7A400A695E9 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		C2658CA716FFF7A400A695E9 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		C2658CA816FFF7A400A695E9 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		C2658CA916FFF7A400A695E9 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		C2658CAA16FFF7A400A695E9 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		C26712C41706B42200F63D2B /* NewsInDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsInDetailCell.h; sourceTree = "<group>"; };
 		C26712C51706B42200F63D2B /* NewsInDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsInDetailCell.m; sourceTree = "<group>"; };
 		C26712C71706B43E00F63D2B /* NewsInDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsInDetail.xib; sourceTree = "<group>"; };
@@ -146,10 +150,6 @@
 		C2725C2F16F978C40010D4FA /* ParserHtml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParserHtml.m; sourceTree = "<group>"; };
 		C279491C16F456510075FB96 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		C2867C0916FB215B000E9964 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		C2902670170487250057BC68 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
-		C2902671170487250057BC68 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
-		C2902672170487250057BC68 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
-		C2902673170487250057BC68 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		C2BAB0E316F56034007F5901 /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
 		C2BAB0E416F56034007F5901 /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
 		C2BAB13016F5C35D007F5901 /* NewsInDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsInDetailViewController.h; path = Mitbbs/NewsInDetailViewController.h; sourceTree = SOURCE_ROOT; };
@@ -253,58 +253,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C20252B716F44475009696AD /* Hpple */ = {
-			isa = PBXGroup;
-			children = (
-				C2902670170487250057BC68 /* TFHppleElement.m */,
-				C2902671170487250057BC68 /* TFHppleElement.h */,
-				C2902672170487250057BC68 /* TFHpple.m */,
-				C2902673170487250057BC68 /* TFHpple.h */,
-				C20252B216F44464009696AD /* XPathQuery.h */,
-				C20252B316F44464009696AD /* XPathQuery.m */,
-			);
-			name = Hpple;
-			path = ../Hpple;
-			sourceTree = "<group>";
-		};
-		C20252BF16F44FFC009696AD /* FlickTabControl */ = {
-			isa = PBXGroup;
-			children = (
-				C20252C016F44FFC009696AD /* Classes */,
-				C20252C816F44FFC009696AD /* Resources */,
-			);
-			name = FlickTabControl;
-			path = ../FlickTabControl;
-			sourceTree = "<group>";
-		};
-		C20252C016F44FFC009696AD /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				C20252C116F44FFC009696AD /* FlickTabButton.h */,
-				C20252C216F44FFC009696AD /* FlickTabButton.m */,
-				C20252C316F44FFC009696AD /* FlickTabControl.h */,
-				C20252C416F44FFC009696AD /* FlickTableViewController.h */,
-				C20252C516F44FFC009696AD /* FlickTableViewController.m */,
-				C20252C616F44FFC009696AD /* FlickTabView.h */,
-				C20252C716F44FFC009696AD /* FlickTabView.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		C20252C816F44FFC009696AD /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C20252C916F44FFC009696AD /* blue-vertical-line.png */,
-				C20252CA16F44FFC009696AD /* flick-fade-lt.png */,
-				C20252CB16F44FFC009696AD /* flick-fade-rt.png */,
-				C20252CC16F44FFC009696AD /* flick-tab-bck.png */,
-				C20252CD16F44FFC009696AD /* flick-tab-over.png */,
-				C20252CE16F44FFC009696AD /* uparrow.png */,
-				C20252CF16F44FFC009696AD /* uparrow@2x.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		C20252F716F450BC009696AD /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,29 +281,78 @@
 		C225AD52170933950095A5B9 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				C20252BF16F44FFC009696AD /* FlickTabControl */,
-				C2658C9E16FFF78300A695E9 /* FMDB */,
-				C20252B716F44475009696AD /* Hpple */,
+				C256766C170B175A0055D6DF /* Hpple */,
+				C256765C170B17540055D6DF /* FMDB */,
+				C2567641170B174D0055D6DF /* FlickTabControl */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
 		};
-		C2658C9E16FFF78300A695E9 /* FMDB */ = {
+		C2567641170B174D0055D6DF /* FlickTabControl */ = {
 			isa = PBXGroup;
 			children = (
-				C2658CA016FFF7A400A695E9 /* FMResultSet.m */,
-				C2658CA116FFF7A400A695E9 /* FMResultSet.h */,
-				C2658CA316FFF7A400A695E9 /* FMDatabaseQueue.m */,
-				C2658CA416FFF7A400A695E9 /* FMDatabaseQueue.h */,
-				C2658CA516FFF7A400A695E9 /* FMDatabasePool.m */,
-				C2658CA616FFF7A400A695E9 /* FMDatabasePool.h */,
-				C2658CA716FFF7A400A695E9 /* FMDatabaseAdditions.m */,
-				C2658CA816FFF7A400A695E9 /* FMDatabaseAdditions.h */,
-				C2658CA916FFF7A400A695E9 /* FMDatabase.m */,
-				C2658CAA16FFF7A400A695E9 /* FMDatabase.h */,
+				C2567642170B174D0055D6DF /* Classes */,
+				C256764A170B174D0055D6DF /* Resources */,
 			);
-			name = FMDB;
-			path = ../FMDB;
+			path = FlickTabControl;
+			sourceTree = "<group>";
+		};
+		C2567642170B174D0055D6DF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C2567643170B174D0055D6DF /* FlickTabButton.h */,
+				C2567644170B174D0055D6DF /* FlickTabButton.m */,
+				C2567645170B174D0055D6DF /* FlickTabControl.h */,
+				C2567646170B174D0055D6DF /* FlickTableViewController.h */,
+				C2567647170B174D0055D6DF /* FlickTableViewController.m */,
+				C2567648170B174D0055D6DF /* FlickTabView.h */,
+				C2567649170B174D0055D6DF /* FlickTabView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C256764A170B174D0055D6DF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C256764B170B174D0055D6DF /* blue-vertical-line.png */,
+				C256764C170B174D0055D6DF /* flick-fade-lt.png */,
+				C256764D170B174D0055D6DF /* flick-fade-rt.png */,
+				C256764E170B174D0055D6DF /* flick-tab-bck.png */,
+				C256764F170B174D0055D6DF /* flick-tab-over.png */,
+				C2567650170B174D0055D6DF /* uparrow.png */,
+				C2567651170B174D0055D6DF /* uparrow@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C256765C170B17540055D6DF /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				C256765D170B17540055D6DF /* FMDatabase.h */,
+				C256765E170B17540055D6DF /* FMDatabase.m */,
+				C256765F170B17540055D6DF /* FMDatabaseAdditions.h */,
+				C2567660170B17540055D6DF /* FMDatabaseAdditions.m */,
+				C2567661170B17540055D6DF /* FMDatabasePool.h */,
+				C2567662170B17540055D6DF /* FMDatabasePool.m */,
+				C2567663170B17540055D6DF /* FMDatabaseQueue.h */,
+				C2567664170B17540055D6DF /* FMDatabaseQueue.m */,
+				C2567665170B17540055D6DF /* FMResultSet.h */,
+				C2567666170B17540055D6DF /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		C256766C170B175A0055D6DF /* Hpple */ = {
+			isa = PBXGroup;
+			children = (
+				C256766D170B175A0055D6DF /* TFHpple.h */,
+				C256766E170B175A0055D6DF /* TFHpple.m */,
+				C256766F170B175A0055D6DF /* TFHppleElement.h */,
+				C2567670170B175A0055D6DF /* TFHppleElement.m */,
+				C2567671170B175A0055D6DF /* XPathQuery.h */,
+				C2567672170B175A0055D6DF /* XPathQuery.m */,
+			);
+			path = Hpple;
 			sourceTree = "<group>";
 		};
 		C26712C21706AE4A00F63D2B /* NewsInDetail */ = {
@@ -434,13 +431,6 @@
 				C20252A416F443E6009696AD /* Default.png in Resources */,
 				C20252A616F443E6009696AD /* Default@2x.png in Resources */,
 				C20252A816F443E6009696AD /* Default-568h@2x.png in Resources */,
-				C20252D316F44FFC009696AD /* blue-vertical-line.png in Resources */,
-				C20252D416F44FFC009696AD /* flick-fade-lt.png in Resources */,
-				C20252D516F44FFC009696AD /* flick-fade-rt.png in Resources */,
-				C20252D616F44FFC009696AD /* flick-tab-bck.png in Resources */,
-				C20252D716F44FFC009696AD /* flick-tab-over.png in Resources */,
-				C20252D816F44FFC009696AD /* uparrow.png in Resources */,
-				C20252D916F44FFC009696AD /* uparrow@2x.png in Resources */,
 				C20252DB16F45073009696AD /* plistdemo.plist in Resources */,
 				C202530516F450BC009696AD /* 123@2x.png in Resources */,
 				C202530616F450BC009696AD /* blue-horizontal-line.png in Resources */,
@@ -462,6 +452,13 @@
 				C225AD4117091CEB0095A5B9 /* 19-gear@2x.png in Resources */,
 				C225AD4217091CEB0095A5B9 /* 19-gear.png in Resources */,
 				C225AD951709CE140095A5B9 /* UserSubscribe.plist in Resources */,
+				C2567655170B174D0055D6DF /* blue-vertical-line.png in Resources */,
+				C2567656170B174D0055D6DF /* flick-fade-lt.png in Resources */,
+				C2567657170B174D0055D6DF /* flick-fade-rt.png in Resources */,
+				C2567658170B174D0055D6DF /* flick-tab-bck.png in Resources */,
+				C2567659170B174D0055D6DF /* flick-tab-over.png in Resources */,
+				C256765A170B174D0055D6DF /* uparrow.png in Resources */,
+				C256765B170B174D0055D6DF /* uparrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,25 +471,25 @@
 			files = (
 				C202529E16F443E6009696AD /* main.m in Sources */,
 				C20252A216F443E6009696AD /* AppDelegate.m in Sources */,
-				C20252B616F44464009696AD /* XPathQuery.m in Sources */,
 				C20252BE16F44F10009696AD /* RootViewController.m in Sources */,
-				C20252D016F44FFC009696AD /* FlickTabButton.m in Sources */,
-				C20252D116F44FFC009696AD /* FlickTableViewController.m in Sources */,
-				C20252D216F44FFC009696AD /* FlickTabView.m in Sources */,
 				C2BAB0E516F56034007F5901 /* CategoryCell.m in Sources */,
 				C2BAB13216F5C35E007F5901 /* NewsInDetailViewController.m in Sources */,
 				C2725C3016F978C40010D4FA /* ParserHtml.m in Sources */,
 				C261CBCD16FE05C200EF9159 /* Database.m in Sources */,
 				C261CBD416FED8A000EF9159 /* ArticleList.m in Sources */,
-				C2658CAB16FFF7A400A695E9 /* FMResultSet.m in Sources */,
-				C2658CAD16FFF7A400A695E9 /* FMDatabaseQueue.m in Sources */,
-				C2658CAE16FFF7A400A695E9 /* FMDatabasePool.m in Sources */,
-				C2658CAF16FFF7A400A695E9 /* FMDatabaseAdditions.m in Sources */,
-				C2658CB016FFF7A400A695E9 /* FMDatabase.m in Sources */,
-				C2902674170487250057BC68 /* TFHppleElement.m in Sources */,
-				C2902675170487250057BC68 /* TFHpple.m in Sources */,
 				C26712C61706B42200F63D2B /* NewsInDetailCell.m in Sources */,
 				C200110117087A8B0047F215 /* MenusViewController.m in Sources */,
+				C2567652170B174D0055D6DF /* FlickTabButton.m in Sources */,
+				C2567653170B174D0055D6DF /* FlickTableViewController.m in Sources */,
+				C2567654170B174D0055D6DF /* FlickTabView.m in Sources */,
+				C2567667170B17540055D6DF /* FMDatabase.m in Sources */,
+				C2567668170B17540055D6DF /* FMDatabaseAdditions.m in Sources */,
+				C2567669170B17540055D6DF /* FMDatabasePool.m in Sources */,
+				C256766A170B17540055D6DF /* FMDatabaseQueue.m in Sources */,
+				C256766B170B17540055D6DF /* FMResultSet.m in Sources */,
+				C2567673170B175A0055D6DF /* TFHpple.m in Sources */,
+				C2567674170B175A0055D6DF /* TFHppleElement.m in Sources */,
+				C2567675170B175A0055D6DF /* XPathQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

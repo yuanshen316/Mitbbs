@@ -21,6 +21,11 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    dispatch_queue_t newsQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_async(newsQueue, ^
+//                   {
+//                       
+//                   });
     if (self) {
         // Custom initialization
     }
@@ -31,7 +36,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    _newsData = [self parserNewsPage];
+    _newsData = [self newsQueue];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,13 +45,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(NSMutableArray *)newsQueue
+{
+    __block NSMutableArray *newsArray = [[NSMutableArray alloc] initWithCapacity:0];
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_async(group, queue, ^
+                         {
+                             newsArray = [self parserNewsPage];
+                         });
+    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+    return newsArray;
+}
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"RowCount = %d",_newsData.count);
+    NSLog(@"_newsData.count = %d",_newsData.count);
     return _newsData.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -85,7 +103,6 @@
         NSString *authorName = [nameAndCategory objectAtIndex:0];
         NSString *category = [nameAndCategory objectAtIndex:1];
         NSArray *newsArray = [newsHtmlElement children];
-        NSLog(@"newsContenta = %@",newsArray);
         
         NSString *newsTitle = [[newsArray objectAtIndex:2] content];
         NSString *newsTime = [[newsArray objectAtIndex:4] content];
